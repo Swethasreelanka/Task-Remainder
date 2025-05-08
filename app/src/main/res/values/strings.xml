@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Task_Reminder</string>
+
+    <string name="task_reminder_title">Task Reminder!</string>
+    <string name="task_details_placeholder">Your task details will appear here.</string>
+    <string name="stop_alarm_button">Stop Alarm</string>
+    <string name="task_not_found">Task not found</string>
+    <string name="task_deadline">Deadline: %1$s</string>
+
+</resources>

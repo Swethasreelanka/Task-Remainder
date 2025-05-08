@@ -1,0 +1,107 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:background="@android:color/white">
+
+    <!-- ScrollView to make content scrollable -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/newTaskButton">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Task Input Field -->
+            <EditText
+                android:id="@+id/newTaskText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="New Task"
+                android:textSize="16sp"
+                android:padding="12dp"
+                android:background="@null"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:drawableStart="@android:drawable/ic_menu_edit"
+                android:drawablePadding="8dp"/>
+
+
+            <!-- Deadline Selection -->
+            <TextView
+                android:id="@+id/deadlineTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Set Deadline"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:padding="12dp"
+                android:drawableStart="@android:drawable/ic_menu_today"
+                android:drawablePadding="8dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="@android:color/white" />
+
+            <!-- Add Reminder Button -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/addReminderTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Add Reminder"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/black"
+                    android:drawableStart="@android:drawable/ic_menu_recent_history"
+                    android:drawablePadding="8dp"
+                    android:padding="12dp"
+                    android:clickable="true"
+                    android:focusable="true"/>
+
+                <Button
+                    android:id="@+id/addReminderButton"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:text="+"
+                    android:backgroundTint="@android:color/holo_green_dark"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="20dp"
+                    />
+            </LinearLayout>
+            <!-- Reminder Section -->
+            <LinearLayout
+                android:id="@+id/reminderContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="8dp"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Save Button -->
+    <Button
+        android:id="@+id/newTaskButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:textAllCaps="false"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
